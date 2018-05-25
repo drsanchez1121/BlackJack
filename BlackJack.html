@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="js/game.js"></script>
+<meta charset="UTF-8">
+<title>Black Jack!</title>
+</head>
+<body>
+<div href="BlackJack.html" id="highRollersTable">
+<div class="container-fluid">
+<div class="card">
+  <div class="card-header">
+    Black Jack!
+  </div>
+<div class="alerts">
+<div class="alert alert-success collapse text-center" id="alertWin">
+  <strong>You Won! Keep playing to increase those racks</strong>
+</div>
+<div class="alert alert-danger collapse text-center" id="alertLose">
+  <strong>You Lost! Play again for a chance to win your money back</strong>
+</div>
+</div>
+  <div class="card-block">
+    <h4 class="card-title text-center"></h4>
+	<h3 class="text-center" id="playerTotalMoney">Total Money: $<span id="money">1000</span></h3>
+	<h3 class="text-center" id="playerBet">Current Bet: $<span id="pot">0</span></h3>
+<div class="row">
+<div class="row col-sm-4">
+</div>
+<div class="table-responsive col-sm-4">
+	<table class="table" id="cardsTable">
+		<tr id="playerRow">
+			<td class="text-center">
+			<h3><strong>Player Cards</strong></h3>
+			<img id="playerCard1" src="images/cardback.png">
+			<img id="playerCard2" src="images/cardback.png">
+			<img id="playerCard3">
+			</td>
+		</tr>
+		<tr>
+			<td class="text-center">
+			<img id="dealerCard2" src="images/cardback.png">
+			<img id="dealerCard1" src="images/cardback.png">
+			<img id="dealerCard3">
+			<h3><strong>Dealer Cards</strong></h3>
+			</td>
+		</tr>
+	</table>
+  
+	<table class="table col-sm-4">
+		<tr>
+			<td id="playerScore" class="text-center">Player Score:<span id="switchScore">0</span></td>
+			<td id="dealerScore" class="text-center">Dealer Score:<span id="switchDealerScore" >0</span></td>
+		</tr>
+	</table>
+</div>
+</div>
+<div class="container-fluid text-center invisible" id="playButtons">
+<button id="btnHit" type="button" onclick="hit()" class="btn btn-success">Hit!</button>
+	<button id="btnStay" type="button" class="btn btn-warning" onClick="stay()">Stay</button>
+	<button id="btnDeal" type="button" onClick="startGame()" class="btn btn-info">Deal</button>
+</div>
+<div class="container-fluid text-center invisible" id="resetButton">
+<button id="reset" type="button" class="btn btn-success btnReset" onclick="reset()">Play Again!</button>
+</div>
+<div class="container-fluid text-center" id="bettingButtons">
+	<p>Enter you bet amount then click done</p>
+	<button id="btn50" type="button" class="btn btn-danger">50</button>
+	<button id="btn100" type="button" class="btn btn-danger">100</button>
+	<button id="btn150" type="button" class="btn btn-danger">150</button>
+	<button id="btn200" type="button" class="btn btn-danger">200</button>
+	<button id="btnDoneBetting" type="button" class="btn btn-success">Done Betting</button>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
